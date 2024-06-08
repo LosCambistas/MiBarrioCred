@@ -8,13 +8,15 @@ import {MenuClientComponent} from "../client_view/menu-client/menu-client.compon
 import {BalanceClientComponent} from "../client_view/balance-client/balance-client.component";
 import {MatIcon} from '@angular/material/icon';
 import {NgOptimizedImage} from "@angular/common";
+import {Balance2ClientComponent} from "../client_view/balance2-client/balance2-client.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     MenuClientComponent,
-    BalanceClientComponent
+    BalanceClientComponent,
+    Balance2ClientComponent
   ],
     imports: [
         BrowserModule,
