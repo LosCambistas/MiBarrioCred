@@ -10,6 +10,7 @@ import {MatIcon} from '@angular/material/icon';
 import {NgOptimizedImage} from "@angular/common";
 import {Balance2ClientComponent} from "../client_view/balance2-client/balance2-client.component";
 import {TransactionClientComponent} from "../client_view/transaction-client/transaction-client.component";
+import {PaymentClientComponent} from "../client_view/payment-client/payment-client.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {TransactionClientComponent} from "../client_view/transaction-client/tran
     MenuClientComponent,
     BalanceClientComponent,
     Balance2ClientComponent,
-    TransactionClientComponent
+    TransactionClientComponent,
+    PaymentClientComponent
   ],
     imports: [
         BrowserModule,
