@@ -11,6 +11,9 @@ import {NgOptimizedImage} from "@angular/common";
 import {Balance2ClientComponent} from "../client_view/balance2-client/balance2-client.component";
 import {TransactionClientComponent} from "../client_view/transaction-client/transaction-client.component";
 import {PaymentClientComponent} from "../client_view/payment-client/payment-client.component";
+import {
+  RegisterPaymentsClientComponent
+} from "../client_view/register-payments-client/register-payments-client.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import {PaymentClientComponent} from "../client_view/payment-client/payment-clie
     BalanceClientComponent,
     Balance2ClientComponent,
     TransactionClientComponent,
-    PaymentClientComponent
+    PaymentClientComponent,
+    RegisterPaymentsClientComponent
   ],
     imports: [
         BrowserModule,
