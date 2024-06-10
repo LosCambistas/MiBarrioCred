@@ -14,6 +14,7 @@ import {PaymentClientComponent} from "../client_view/payment-client/payment-clie
 import {
   RegisterPaymentsClientComponent
 } from "../client_view/register-payments-client/register-payments-client.component";
+import {MenuComponent} from "../screens/menu/menu.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import {
     Balance2ClientComponent,
     TransactionClientComponent,
     PaymentClientComponent,
-    RegisterPaymentsClientComponent
+    RegisterPaymentsClientComponent,
+    MenuClientComponent,
+    MenuComponent
   ],
     imports: [
         BrowserModule,
