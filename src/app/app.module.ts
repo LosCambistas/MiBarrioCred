@@ -17,6 +17,7 @@ import {
 import {MenuComponent} from "../screens/menu/menu.component";
 import {LoginComponent} from "../screens/login/login.component";
 import {MenuBusinessmanComponent} from "../businessman_view/menu-businessman/menu-businessman.component";
+import {BalanceBusinessmanComponent} from "../businessman_view/balance-businessman/balance-businessman.component"
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MenuBusinessmanComponent} from "../businessman_view/menu-businessman/men
     MenuClientComponent,
     MenuComponent,
     LoginComponent,
-    MenuBusinessmanComponent
+    MenuBusinessmanComponent,
+    BalanceBusinessmanComponent
   ],
     imports: [
         BrowserModule,
