@@ -16,6 +16,7 @@ import {
 } from "../client_view/register-payments-client/register-payments-client.component";
 import {MenuComponent} from "../screens/menu/menu.component";
 import {LoginComponent} from "../screens/login/login.component";
+import {MenuBusinessmanComponent} from "../businessman_view/menu-businessman/menu-businessman.component";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {LoginComponent} from "../screens/login/login.component";
     RegisterPaymentsClientComponent,
     MenuClientComponent,
     MenuComponent,
-    LoginComponent
+    LoginComponent,
+    MenuBusinessmanComponent
   ],
     imports: [
         BrowserModule,
