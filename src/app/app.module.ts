@@ -22,6 +22,7 @@ import {Balance2BusinessmanComponent} from "../businessman_view/balance2-busines
 import {
   RegisterPaymentsBusinessmanComponent
 } from "../businessman_view/register-payments-businessman/register-payments-businessman.component";
+import {ReportsBusinessmanComponent} from "../businessman_view/reports-businessman/reports-businessman.component";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {
     MenuBusinessmanComponent,
     BalanceBusinessmanComponent,
     Balance2BusinessmanComponent,
-    RegisterPaymentsBusinessmanComponent
+    RegisterPaymentsBusinessmanComponent,
+    ReportsBusinessmanComponent
   ],
     imports: [
         BrowserModule,
