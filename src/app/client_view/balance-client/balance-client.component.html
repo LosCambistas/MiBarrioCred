@@ -1,0 +1,55 @@
+<body>
+<div class="container">
+  <nav>
+    <ul>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Cómo Trabajamos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <hr>
+
+  <h2 class="title">RESUMEN DE SALDO ACTUAL CLIENTE</h2>
+
+  <div class="center">
+
+    <div class="balance">
+      <h2>SALDO ACTUAL</h2>
+
+      <div class="open">
+        <label for="balance">Abrir: </label>
+        <input id="balance" name="open" [(ngModel)]="userBalance">
+        <button (click)="verSaldo()" >Ver</button>
+      </div>
+
+      <div class="pay">
+        <label for="user-pay">PAGO A NEGOCIO:</label>
+        <select id="user-pay" name="user-pay" [(ngModel)]="selectedPayment">
+          <option value=""></option>
+          <option value="Alicorp">Alicorp</option>
+          <option value="Tottus">Tottus</option>
+          <option value="Gloria">Gloria</option>
+        </select>
+      </div>
+
+      <button type="submit" (click)="pagar()">Pagar</button>
+
+      <label id="label1">TARJETAS VINCULADAS</label>
+
+      <div class="icon-pay">
+        <img src="../../../assets/images/creditcard.png" height="125" width="125" alt="image-pay">
+      </div>
+
+    </div>
+
+    <div class="credit">
+      <h2>CREDITO</h2>
+      <label>Bienvenido de nuevo! Tu saldo actual es S/{{userBalance}} y tu límite de crédito es S/ [Límite de Crédito]. Recuerda, mantener tus gastos dentro del límite te ayuda a evitar intereses adicionales y mantiene tu crédito en buena forma. ¿Necesitas ayuda? ¡Contáctanos!</label>
+      <img src="../../../assets/images/money1.png" height="180" width="230" alt="image-credit">
+    </div>
+
+  </div>
+
+</div>
+</body>

@@ -1,0 +1,58 @@
+<body>
+<div class="container">
+  <nav>
+    <ul>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Cómo Trabajamos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <hr>
+
+  <h2 class="title">RESUMEN DE SALDO ACTUAL CLIENTE</h2>
+
+  <div class="center">
+
+    <div class="balance">
+      <h2>Pago</h2>
+
+      <div class="open">
+        <label for="card-type">Tipo De Tarjeta: </label>
+        <select id="card-type" name="card-type" [(ngModel)]="cardType" required>
+          <option value=""></option>
+          <option value="credito">Crédito</option>
+          <option value="debito">Débito</option>
+        </select>
+      </div>
+
+      <div class="open">
+        <label for="card-number">Numero De Tarjeta: </label>
+        <input id="card-number" name="card-number" [(ngModel)]="cardNumber" maxlength="16" required pattern="\d{16}">
+      </div>
+
+      <div class="open">
+        <label for="expiry-date">Fecha De Caducidad: </label>
+        <input type="date" id="expiry-date" name="expiry-date" [(ngModel)]="expiryDate" required>
+      </div>
+
+      <div class="open">
+        <label for="security-number">Numero De Seguridad: </label>
+        <input id="security-number" name="security-number" [(ngModel)]="securityNumber" maxlength="3" required pattern="\d{3}">
+      </div>
+
+      <div class="buttons">
+        <button type="submit">Informacion De Facturacion</button>
+        <button type="submit" (click)="confirmarPago()" id="button2">Confirmar Pago</button>
+      </div>
+    </div>
+
+    <div class="credit">
+      <h2>CREDITO</h2>
+      <label>Bienvenido de nuevo! Tu saldo actual es S/ [Saldo Actual] y tu límite de crédito es S/ [Límite de Crédito]. Recuerda, mantener tus gastos dentro del límite te ayuda a evitar intereses adicionales y mantiene tu crédito en buena forma. ¿Necesitas ayuda? ¡Contáctanos!</label>
+      <img ngSrc="../../../assets/images/money1.png" height="180" width="230" alt="image-credit">
+    </div>
+
+  </div>
+</div>
+</body>

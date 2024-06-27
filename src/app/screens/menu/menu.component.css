@@ -1,0 +1,144 @@
+body {
+  font-family: 'Rubik Mono One', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  margin-top: 10px;
+  max-width: 900px;
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+nav ul li {
+  margin: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #404041;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: deepskyblue;
+}
+
+h1
+{
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  width: 40%;
+  color: #000000;
+  background-color: #8CDAA4;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.main
+{
+  font-family: "Bakbak One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: space-between;
+}
+
+.center
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+  align-items: center;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.buttons
+{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.buttons button:hover
+{
+  cursor: grab;
+  background-color: #404041;
+  transition-delay: 0.2s;
+}
+
+#button1:hover
+{
+  background-color: #404041;
+  transition-delay: 0.2s;
+}
+
+.center button
+{
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #FF9D6C;
+  margin-bottom: 10px;
+}
+
+.top
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.top h1
+{
+  margin-bottom: 10px;
+}
+
+.transaction
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  width: 48%;
+  max-width: 500px;
+}
+
+.transaction img
+{
+  padding: 15px;
+}
+
+#button1
+{
+  background-color: #8ED1F8;
+}
