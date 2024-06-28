@@ -7,7 +7,7 @@ export class Usuario {
   userType: string;
   balance: number;
 
-  constructor(firstName: string, lastName: string, email: string, password: string, userType: string) {
+  constructor(firstName: string,  lastName: string, email: string, password: string, userType: string) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;

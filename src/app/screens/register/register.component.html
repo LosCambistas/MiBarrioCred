@@ -58,8 +58,8 @@
     <div class="form-group">
       <label for="user-type">Tipo de Usuario:</label>
       <select id="user-type" formControlName="userType">
-        <option value="admin">Administrador</option>
-        <option value="user">Usuario</option>
+        <option value="merchant">Comerciante</option>
+        <option value="client">Cliente</option>
       </select>
       <div *ngIf="registerForm.get('userType')?.invalid && registerForm.get('userType')?.touched">
         <small>Tipo de usuario es requerido.</small>

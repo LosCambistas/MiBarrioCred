@@ -39,9 +39,9 @@ export class RegisterComponent implements OnInit {
       console.log('Nuevo Usuario:', newUser);
 
       // Redireccionar según el tipo de usuario
-      if (userType === 'admin') {
+      if (userType === 'merchant') {
         this.router.navigate(['/business_menu']);
-      } else if (userType === 'user') {
+      } else if (userType === 'client') {
         this.router.navigate(['/client_menu']);
       }
 

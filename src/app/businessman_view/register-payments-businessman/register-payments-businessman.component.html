@@ -23,19 +23,15 @@
       </div>
 
       <div class="open">
-        <label for="pay">PAGO: </label>
-        <input id="pay" name="pay">
-      </div>
-
-      <div class="open">
-        <label for="credit">CREDITO DEL PAGO: </label>
-        <input id="credit" name="n_time">
-      </div>
-
-      <div class="open">
-        <label for="time_limit">TIEMPO LIMITE DEL CREDITO: </label>
-        <input type="date" id="time_limit" name="time_limit">
-      </div>
+        <form (ngSubmit)="chooseMethod()">
+          <label for="methodType">Tipo de Amortización:</label>
+          <select id="methodType" [(ngModel)]="methodType" name="methodType">
+            <option value="french">Francesa</option>
+            <option value="german">Alemana</option>
+            <option value="peruvian">Peruana</option>
+          </select>
+        </form>
+        </div>
 
       <button type="submit">Confirmar</button>
     </div>

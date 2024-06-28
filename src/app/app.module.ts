@@ -24,6 +24,7 @@ import {
 } from "./businessman_view/register-payments-businessman/register-payments-businessman.component";
 import {ReportsBusinessmanComponent} from "./businessman_view/reports-businessman/reports-businessman.component";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,7 @@ import {ReportsBusinessmanComponent} from "./businessman_view/reports-businessma
     BalanceBusinessmanComponent,
     Balance2BusinessmanComponent,
     RegisterPaymentsBusinessmanComponent,
-    ReportsBusinessmanComponent,
+    ReportsBusinessmanComponent
   ],
   imports: [
     BrowserModule,
