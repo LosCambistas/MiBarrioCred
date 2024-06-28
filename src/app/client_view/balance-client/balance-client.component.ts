@@ -1,35 +1,31 @@
-import { Component } from '@angular/core';
-import {Usuario} from "../../auth/usuario";
-import {Router} from "@angular/router";
+import {Component} from '@angular/core';
+import {PaymentService} from "../../auth/payment.service";
 
 @Component({
   selector: 'app-balance-client',
   templateUrl: './balance-client.component.html',
   styleUrl: './balance-client.component.css'
 })
-export class BalanceClientComponent {
-  userBalance: number = 0;
-  selectedPayment: string = '';
-  usuario: Usuario;
+export class BalanceClientComponent{
 
-  constructor(private router: Router) {
-    // Suponiendo que los datos del usuario vienen de algún servicio o almacenamiento local
-    this.usuario = new Usuario('John', 'Doe', 'john.doe@example.com', 'password123', 'user');
-    this.usuario.balance = 50000; // Asigna un saldo inicial para el ejemplo
-  }
+  balanceAmount: number = 0;
+  selectedBusiness: string = '';
 
-  verSaldo(): void {
-    this.userBalance = this.usuario.balance;
-  }
+  constructor(private paymentService: PaymentService) {}
 
-  pagar(): void {
-    if (this.selectedPayment === '') {
-      alert('Por favor, selecciona un pago a negocio antes de continuar.');
-    } else {
-      // Lógica para proceder con el pago
-      console.log(`Pago a negocio seleccionado: ${this.selectedPayment}`);
-      this.router.navigate(['/client_balance2']);
-      // Aquí podrías agregar lógica adicional para procesar el pago
+  payInstallment() {
+    if (!this.selectedBusiness || isNaN(this.balanceAmount) || this.balanceAmount <= 0) {
+      alert('Por favor completa todos los campos con valores válidos.');
+      return;
     }
+
+    // Llamar al servicio para pagar una cuota
+    this.paymentService.payInstallment(this.selectedBusiness, this.balanceAmount);
+
+    alert(`Pago de S/ ${this.balanceAmount.toFixed(2)} realizado al negocio ${this.selectedBusiness}.`);
+
+    // Limpiar los campos después del pago (opcional)
+    this.selectedBusiness = '';
+    this.balanceAmount = 0;
   }
 }

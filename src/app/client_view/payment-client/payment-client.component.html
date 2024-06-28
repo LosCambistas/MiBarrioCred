@@ -10,7 +10,11 @@
 
   <hr>
 
-  <h2 class="title">PROXIMOS PAGOS CLIENTES</h2>
+  <div class="top">
+    <h2 class="title">PROXIMOS PAGOS CLIENTES</h2>
+    <button type="submit" routerLink="/client_menu">Volver</button>
+  </div>
+
 
   <div class="main">
 
@@ -18,11 +22,19 @@
       <h2>PROXIMOS PAGOS</h2>
 
       <div class="movements">
-        <label>
-          LISTA DE PAGOS FUTUROS
-        </label>
-        <textarea></textarea>
-      </div>
+        <label>SELECCIONA EL NEGOCIO</label>
+        <select (change)="onStoreChange($event)">
+          <option></option>
+          <option *ngFor="let store of stores" [value]="store">{{ store }}</option>
+        </select>
+
+        <label>LISTA DE PAGOS FUTUROS</label>
+        <ul>
+          <li *ngFor="let payment of futurePayments$ | async">
+            {{ payment.store }} - S/ {{ payment.amount.toFixed(2) }} - {{ payment.date | date: 'dd/MM/yyyy' }}
+          </li>
+        </ul>
+    </div>
 
     </div>
 
@@ -43,13 +55,8 @@
       </label>
 
       <img ngSrc="../../../assets/images/money1.png" height="150" width="150" alt="image-credit">
-
     </div>
-
   </div>
-
 
 </div>
 </body>
-
-

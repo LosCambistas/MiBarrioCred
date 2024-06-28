@@ -129,6 +129,63 @@ h2 {
   margin-right: 10px;
 }
 
+.card-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button
+{
+  width: 10%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #8CD0F7;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+button:hover
+{
+  background-color: #ff6347;
+  color: black;
+}
+
+.card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card-content
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content p
+{
+  margin-left: 10px;
+}
+
+.top
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
 

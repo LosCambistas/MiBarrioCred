@@ -10,7 +10,10 @@
 
   <hr>
 
-  <h2 class="title">RESUMEN DE SALDO ACTUAL CLIENTE</h2>
+  <div class="top">
+    <h2 class="title">RESUMEN DE SALDO ACTUAL CLIENTE</h2>
+    <button type="submit" routerLink="/client_menu">Volver</button>
+  </div>
 
   <div class="center">
 
@@ -18,14 +21,13 @@
       <h2>SALDO ACTUAL</h2>
 
       <div class="open">
-        <label for="balance">Abrir: </label>
-        <input id="balance" name="open" [(ngModel)]="userBalance">
-        <button (click)="verSaldo()" >Ver</button>
+        <label for="balance">Saldo: </label>
+        <input id="balance" name="balance" [(ngModel)]="balanceAmount">
       </div>
 
       <div class="pay">
         <label for="user-pay">PAGO A NEGOCIO:</label>
-        <select id="user-pay" name="user-pay" [(ngModel)]="selectedPayment">
+        <select id="user-pay" name="user-pay" [(ngModel)]="selectedBusiness">
           <option value=""></option>
           <option value="Alicorp">Alicorp</option>
           <option value="Tottus">Tottus</option>
@@ -33,7 +35,7 @@
         </select>
       </div>
 
-      <button type="submit" (click)="pagar()">Pagar</button>
+      <button type="submit" (click)="payInstallment()">Pagar</button>
 
       <label id="label1">TARJETAS VINCULADAS</label>
 
@@ -45,7 +47,7 @@
 
     <div class="credit">
       <h2>CREDITO</h2>
-      <label>Bienvenido de nuevo! Tu saldo actual es S/{{userBalance}} y tu límite de crédito es S/ [Límite de Crédito]. Recuerda, mantener tus gastos dentro del límite te ayuda a evitar intereses adicionales y mantiene tu crédito en buena forma. ¿Necesitas ayuda? ¡Contáctanos!</label>
+      <label>Bienvenido de nuevo! Tu saldo actual es S/ y tu límite de crédito es S/ [Límite de Crédito]. Recuerda, mantener tus gastos dentro del límite te ayuda a evitar intereses adicionales y mantiene tu crédito en buena forma. ¿Necesitas ayuda? ¡Contáctanos!</label>
       <img src="../../../assets/images/money1.png" height="180" width="230" alt="image-credit">
     </div>
 
