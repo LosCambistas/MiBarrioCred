@@ -22,7 +22,11 @@
           LISTA DE REPORTES DE CLIENTES
           QUE CANCELARON SUS PAGOS
         </label>
-        <textarea></textarea>
+        <ul>
+          <li *ngFor="let report of reports">
+            <strong>{{ report.clientName }}</strong> - {{ report.status }} - {{ report.amountReceived }} - {{ report.creditPercentage }}% - {{ report.creditTime }}
+          </li>
+        </ul>
       </div>
 
     </div>
