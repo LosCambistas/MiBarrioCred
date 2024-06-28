@@ -134,6 +134,19 @@ button:hover {
   width: 50%;
 }
 
+.top
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top button
+{
+  width: 15%;
+  margin-right: 15px;
+}
+
 .pay label
 {
   font-weight: bold;
