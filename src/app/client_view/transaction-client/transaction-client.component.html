@@ -10,18 +10,32 @@
 
   <hr>
 
-  <h2 class="title">ULTIMAS TRANSACCIONES CLIENTE</h2>
+  <div class="top">
+    <h2 class="title">ULTIMAS TRANSACCIONES CLIENTE</h2>
+    <button type="submit" routerLink="/client_menu">Volver</button>
+  </div>
 
   <div class="main">
 
     <div class="center">
+
       <h2>ULTIMAS TRANSACCIONES</h2>
 
       <div class="movements">
         <label>
           Movimientos
         </label>
-        <textarea></textarea>
+
+        <div class="card-container">
+          <div class="card" *ngFor="let transaction of transactions">
+            <div class="card-content">
+              <p>Tienda: {{ transaction.nombreTienda }}</p>
+              <p>Saldo: S/{{ transaction.saldo.toFixed(2) }}</p>
+              <p>Fecha: {{ transaction.fecha | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>

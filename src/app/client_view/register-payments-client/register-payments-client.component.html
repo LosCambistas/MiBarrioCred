@@ -10,7 +10,11 @@
 
   <hr>
 
-  <h2 class="title">REGISTRO DE PAGOS CLIENTE</h2>
+  <div class="top">
+    <h2 class="title">REGISTRO DE PAGOS CLIENTE</h2>
+    <button type="submit" routerLink="/client_menu">Volver</button>
+  </div>
+
 
   <div class="main">
 
@@ -19,25 +23,52 @@
 
       <div class="open">
         <label for="business_name">NOMBRE DEL NEGOCIO: </label>
-        <input id="business_name" name="business_name">
+        <select id="business_name" name="business_name" [(ngModel)]="payment.business_name" required>
+          <option value=""></option>
+          <option value="Alicorp">Alicorp</option>
+          <option value="Tottus">Tottus</option>
+          <option value="Gloria">Gloria</option>
+        </select>
       </div>
 
       <div class="open">
-        <label for="pay">PAGO: </label>
-        <input id="pay" name="pay">
+        <label for="pay">MONTO A PAGAR S/: </label>
+        <input id="pay" name="pay" [(ngModel)]="payment.pay" required>
       </div>
 
       <div class="open">
-        <label for="credit">CREDITO DEL PAGO: </label>
-        <input id="credit" name="n_time">
+        <label for="credit">TASA DE INTERES NOMINAL (% ANUAL): </label>
+        <input id="credit" name="credit" [(ngModel)]="payment.credit" required>
       </div>
 
       <div class="open">
-        <label for="time_limit">TIEMPO LIMITE DEL CREDITO: </label>
-        <input type="date" id="time_limit" name="time_limit">
+        <label for="time_limit">PERIODO DE PAGO: </label>
+        <select id="time_limit" name="time_limit" [(ngModel)]="payment.time_limit" required>
+          <option value=""></option>
+          <option value="mensual">Mensual</option>
+          <option value="trimestral">Trimestral</option>
+          <option value="anual">Anual</option>
+        </select>
       </div>
 
-      <button type="submit">Confirmar</button>
+      <div class="open">
+        <label for="number_share">NUMERO DE CUOTAS: </label>
+        <input type="number" id="number_share" name="number_share" [(ngModel)]="payment.number_share" required>
+      </div>
+
+      <div class="open">
+        <label for="type_amortization">TIPO DE AMORTIZACION: </label>
+
+        <select id="type_amortization" name="type_amortization" [(ngModel)]="payment.type_amortization" required>
+          <option value=""></option>
+          <option value="frances">Frances</option>
+          <option value="aleman">Aleman</option>
+          <option value="peruano">Peruano</option>
+        </select>
+
+      </div>
+
+      <button type="submit" (click)="onSubmit()" >Confirmar</button>
     </div>
 
     <div class="transaction">
